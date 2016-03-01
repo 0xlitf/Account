@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="Account">
+    <file>Resources/Entypo_e740(0)_32.png</file>
+    <file>Resources/Entypo_e729(0)_64.png</file>
+    <file>Resources/Entypo_25d1(5)_48.png</file>
+    <file>Resources/Entypo_25d1(5)_64.png</file>
+    <file>Resources/Entypo_229e(6)_48.png</file>
+    <file>Resources/Entypo_229e(6)_64.png</file>
+    <file>Resources/Entypo_2630(7)_48.png</file>
+    <file>Resources/Entypo_2630(7)_64.png</file>
+    <file>Resources/Entypo_2712(0)_48.png</file>
+    <file>Resources/Entypo_2712(0)_64.png</file>
+    <file>Resources/Entypo_e79b(2)_48.png</file>
+    <file>Resources/Entypo_e79b(2)_64.png</file>
+    <file>Resources/Entypo_e731(4)_48.png</file>
+    <file>Resources/Entypo_e731(4)_64.png</file>
+    <file>Resources/Entypo_e736(1)_48.png</file>
+    <file>Resources/Entypo_e736(1)_64.png</file>
+    <file>Resources/Entypo_f601(3)_48.png</file>
+    <file>Resources/Entypo_f601(3)_64.png</file>
+  </qresource>
+</RCC>
