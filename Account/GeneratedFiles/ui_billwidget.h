@@ -39,33 +39,32 @@ public:
     QGridLayout *gridLayout;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_3;
-    QCheckBox *relics;
-    QLabel *label_3;
-    QLineEdit *ranking;
-    QLineEdit *costPrice;
-    QLabel *label_8;
-    QLabel *label_6;
-    QLabel *label;
-    QDateEdit *dateEdit;
-    QLabel *label_10;
-    QLineEdit *totalProfit;
-    QLineEdit *personalProfit;
-    QLabel *label_9;
-    QLineEdit *totalTurnover;
-    QLabel *label_2;
-    QLineEdit *name;
-    QLineEdit *billCount;
     QLabel *label_7;
+    QLabel *label_8;
+    QLineEdit *billCount;
+    QLabel *label_10;
+    QLabel *label_6;
+    QLabel *label_9;
+    QLineEdit *personalProfit;
+    QLineEdit *fundsTransfer;
+    QLabel *label;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *importBtn;
     QSpacerItem *horizontalSpacer_2;
-    QLineEdit *fundsTransfer;
-    QLabel *label_4;
-    QHBoxLayout *horizontalLayout_3;
-    QPushButton *calculateBtn;
-    QSpacerItem *horizontalSpacer_3;
+    QLineEdit *totalProfit;
+    QLineEdit *ranking;
+    QCheckBox *relics;
     QLabel *label_5;
+    QLabel *label_2;
+    QLineEdit *name;
+    QDateEdit *dateEdit;
+    QPushButton *calculateBtn;
+    QLabel *label_4;
+    QLineEdit *totalTurnover;
+    QLineEdit *costPrice;
+    QLabel *label_3;
     QLabel *label_11;
+    QCheckBox *reject;
     QSpacerItem *horizontalSpacer_4;
     QGroupBox *groupBox_2;
     QVBoxLayout *verticalLayout_3;
@@ -100,95 +99,56 @@ public:
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
-        relics = new QCheckBox(groupBox);
-        relics->setObjectName(QStringLiteral("relics"));
-        relics->setChecked(true);
+        label_7 = new QLabel(groupBox);
+        label_7->setObjectName(QStringLiteral("label_7"));
 
-        gridLayout_3->addWidget(relics, 0, 3, 1, 1);
-
-        label_3 = new QLabel(groupBox);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout_3->addWidget(label_3, 1, 2, 1, 1);
-
-        ranking = new QLineEdit(groupBox);
-        ranking->setObjectName(QStringLiteral("ranking"));
-
-        gridLayout_3->addWidget(ranking, 1, 1, 1, 1);
-
-        costPrice = new QLineEdit(groupBox);
-        costPrice->setObjectName(QStringLiteral("costPrice"));
-
-        gridLayout_3->addWidget(costPrice, 1, 3, 1, 1);
+        gridLayout_3->addWidget(label_7, 3, 0, 1, 1);
 
         label_8 = new QLabel(groupBox);
         label_8->setObjectName(QStringLiteral("label_8"));
 
-        gridLayout_3->addWidget(label_8, 1, 5, 1, 1);
+        gridLayout_3->addWidget(label_8, 2, 4, 1, 1);
 
-        label_6 = new QLabel(groupBox);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setStyleSheet(QStringLiteral(""));
+        billCount = new QLineEdit(groupBox);
+        billCount->setObjectName(QStringLiteral("billCount"));
+        billCount->setClearButtonEnabled(true);
 
-        gridLayout_3->addWidget(label_6, 0, 5, 1, 1);
-
-        label = new QLabel(groupBox);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout_3->addWidget(label, 1, 0, 1, 1);
-
-        dateEdit = new QDateEdit(groupBox);
-        dateEdit->setObjectName(QStringLiteral("dateEdit"));
-        dateEdit->setDateTime(QDateTime(QDate(2016, 2, 14), QTime(0, 0, 0)));
-
-        gridLayout_3->addWidget(dateEdit, 0, 1, 1, 1);
+        gridLayout_3->addWidget(billCount, 3, 1, 1, 1);
 
         label_10 = new QLabel(groupBox);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         gridLayout_3->addWidget(label_10, 0, 0, 1, 1);
 
-        totalProfit = new QLineEdit(groupBox);
-        totalProfit->setObjectName(QStringLiteral("totalProfit"));
-        totalProfit->setReadOnly(false);
+        label_6 = new QLabel(groupBox);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setStyleSheet(QStringLiteral(""));
 
-        gridLayout_3->addWidget(totalProfit, 0, 6, 1, 1);
-
-        personalProfit = new QLineEdit(groupBox);
-        personalProfit->setObjectName(QStringLiteral("personalProfit"));
-        personalProfit->setReadOnly(false);
-
-        gridLayout_3->addWidget(personalProfit, 1, 6, 1, 1);
+        gridLayout_3->addWidget(label_6, 0, 4, 1, 1);
 
         label_9 = new QLabel(groupBox);
         label_9->setObjectName(QStringLiteral("label_9"));
 
         gridLayout_3->addWidget(label_9, 0, 2, 1, 1);
 
-        totalTurnover = new QLineEdit(groupBox);
-        totalTurnover->setObjectName(QStringLiteral("totalTurnover"));
+        personalProfit = new QLineEdit(groupBox);
+        personalProfit->setObjectName(QStringLiteral("personalProfit"));
+        personalProfit->setReadOnly(false);
+        personalProfit->setClearButtonEnabled(true);
 
-        gridLayout_3->addWidget(totalTurnover, 2, 3, 1, 1);
+        gridLayout_3->addWidget(personalProfit, 2, 5, 1, 1);
 
-        label_2 = new QLabel(groupBox);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        fundsTransfer = new QLineEdit(groupBox);
+        fundsTransfer->setObjectName(QStringLiteral("fundsTransfer"));
+        fundsTransfer->setReadOnly(false);
+        fundsTransfer->setClearButtonEnabled(true);
 
-        gridLayout_3->addWidget(label_2, 3, 0, 1, 1);
+        gridLayout_3->addWidget(fundsTransfer, 3, 5, 1, 1);
 
-        name = new QLineEdit(groupBox);
-        name->setObjectName(QStringLiteral("name"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QStringLiteral("label"));
 
-        gridLayout_3->addWidget(name, 3, 1, 1, 1);
-
-        billCount = new QLineEdit(groupBox);
-        billCount->setObjectName(QStringLiteral("billCount"));
-
-        gridLayout_3->addWidget(billCount, 2, 1, 1, 1);
-
-        label_7 = new QLabel(groupBox);
-        label_7->setObjectName(QStringLiteral("label_7"));
-
-        gridLayout_3->addWidget(label_7, 2, 0, 1, 1);
+        gridLayout_3->addWidget(label, 2, 0, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
@@ -203,43 +163,86 @@ public:
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
 
-        gridLayout_3->addLayout(horizontalLayout_2, 3, 6, 1, 1);
+        gridLayout_3->addLayout(horizontalLayout_2, 4, 5, 1, 1);
 
-        fundsTransfer = new QLineEdit(groupBox);
-        fundsTransfer->setObjectName(QStringLiteral("fundsTransfer"));
-        fundsTransfer->setReadOnly(false);
+        totalProfit = new QLineEdit(groupBox);
+        totalProfit->setObjectName(QStringLiteral("totalProfit"));
+        totalProfit->setReadOnly(false);
+        totalProfit->setClearButtonEnabled(true);
 
-        gridLayout_3->addWidget(fundsTransfer, 2, 6, 1, 1);
+        gridLayout_3->addWidget(totalProfit, 0, 5, 1, 1);
 
-        label_4 = new QLabel(groupBox);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        ranking = new QLineEdit(groupBox);
+        ranking->setObjectName(QStringLiteral("ranking"));
+        ranking->setClearButtonEnabled(true);
 
-        gridLayout_3->addWidget(label_4, 2, 2, 1, 1);
+        gridLayout_3->addWidget(ranking, 2, 1, 1, 1);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        calculateBtn = new QPushButton(groupBox);
-        calculateBtn->setObjectName(QStringLiteral("calculateBtn"));
+        relics = new QCheckBox(groupBox);
+        relics->setObjectName(QStringLiteral("relics"));
+        relics->setChecked(true);
 
-        horizontalLayout_3->addWidget(calculateBtn);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_3);
-
-
-        gridLayout_3->addLayout(horizontalLayout_3, 3, 3, 1, 1);
+        gridLayout_3->addWidget(relics, 0, 3, 1, 1);
 
         label_5 = new QLabel(groupBox);
         label_5->setObjectName(QStringLiteral("label_5"));
 
-        gridLayout_3->addWidget(label_5, 2, 5, 1, 1);
+        gridLayout_3->addWidget(label_5, 3, 4, 1, 1);
+
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        gridLayout_3->addWidget(label_2, 4, 0, 1, 1);
+
+        name = new QLineEdit(groupBox);
+        name->setObjectName(QStringLiteral("name"));
+        name->setClearButtonEnabled(true);
+
+        gridLayout_3->addWidget(name, 4, 1, 1, 1);
+
+        dateEdit = new QDateEdit(groupBox);
+        dateEdit->setObjectName(QStringLiteral("dateEdit"));
+        dateEdit->setDateTime(QDateTime(QDate(2016, 2, 14), QTime(0, 0, 0)));
+
+        gridLayout_3->addWidget(dateEdit, 0, 1, 1, 1);
+
+        calculateBtn = new QPushButton(groupBox);
+        calculateBtn->setObjectName(QStringLiteral("calculateBtn"));
+
+        gridLayout_3->addWidget(calculateBtn, 4, 4, 1, 1);
+
+        label_4 = new QLabel(groupBox);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        gridLayout_3->addWidget(label_4, 4, 2, 1, 1);
+
+        totalTurnover = new QLineEdit(groupBox);
+        totalTurnover->setObjectName(QStringLiteral("totalTurnover"));
+        totalTurnover->setClearButtonEnabled(true);
+
+        gridLayout_3->addWidget(totalTurnover, 4, 3, 1, 1);
+
+        costPrice = new QLineEdit(groupBox);
+        costPrice->setObjectName(QStringLiteral("costPrice"));
+        costPrice->setClearButtonEnabled(true);
+
+        gridLayout_3->addWidget(costPrice, 3, 3, 1, 1);
+
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_3->addWidget(label_3, 3, 2, 1, 1);
 
         label_11 = new QLabel(groupBox);
         label_11->setObjectName(QStringLiteral("label_11"));
 
-        gridLayout_3->addWidget(label_11, 3, 2, 1, 1);
+        gridLayout_3->addWidget(label_11, 2, 2, 1, 1);
+
+        reject = new QCheckBox(groupBox);
+        reject->setObjectName(QStringLiteral("reject"));
+        reject->setChecked(false);
+
+        gridLayout_3->addWidget(reject, 2, 3, 1, 1);
 
 
         gridLayout->addWidget(groupBox, 0, 0, 1, 1);
@@ -306,10 +309,7 @@ public:
         QWidget::setTabOrder(ranking, billCount);
         QWidget::setTabOrder(billCount, name);
         QWidget::setTabOrder(name, relics);
-        QWidget::setTabOrder(relics, costPrice);
-        QWidget::setTabOrder(costPrice, totalTurnover);
-        QWidget::setTabOrder(totalTurnover, calculateBtn);
-        QWidget::setTabOrder(calculateBtn, totalProfit);
+        QWidget::setTabOrder(relics, totalProfit);
         QWidget::setTabOrder(totalProfit, personalProfit);
         QWidget::setTabOrder(personalProfit, fundsTransfer);
         QWidget::setTabOrder(fundsTransfer, importBtn);
@@ -324,26 +324,28 @@ public:
     {
         BillWidget->setWindowTitle(QApplication::translate("BillWidget", "BillWidget", 0));
         groupBox->setTitle(QApplication::translate("BillWidget", "\345\275\225\345\205\245", 0));
-        relics->setText(QString());
-        label_3->setText(QApplication::translate("BillWidget", "\346\210\220\346\234\254\357\274\232", 0));
-        ranking->setText(QString());
-        costPrice->setText(QString());
+        label_7->setText(QApplication::translate("BillWidget", "\345\215\225\346\225\260\357\274\232", 0));
         label_8->setText(QApplication::translate("BillWidget", "\344\270\252\344\272\272\345\210\251\346\266\246\357\274\232", 0));
-        label_6->setText(QApplication::translate("BillWidget", "\346\200\273\345\210\251\346\266\246\357\274\232", 0));
-        label->setText(QApplication::translate("BillWidget", "\346\216\222\345\220\215\357\274\232", 0));
-        dateEdit->setDisplayFormat(QApplication::translate("BillWidget", "yyyy-MM-dd", 0));
+        billCount->setText(QString());
         label_10->setText(QApplication::translate("BillWidget", "\346\227\245\346\234\237\357\274\232", 0));
+        label_6->setText(QApplication::translate("BillWidget", "\346\200\273\345\210\251\346\266\246\357\274\232", 0));
         label_9->setText(QApplication::translate("BillWidget", "\346\230\257\345\220\246\347\234\237\350\277\271\357\274\232", 0));
-        totalTurnover->setText(QString());
+        label->setText(QApplication::translate("BillWidget", "\346\216\222\345\220\215\357\274\232", 0));
+        importBtn->setText(QApplication::translate("BillWidget", "\345\257\274\345\205\245\346\225\260\346\215\256\345\272\223", 0));
+        ranking->setText(QString());
+        relics->setText(QApplication::translate("BillWidget", "\346\230\257", 0));
+        label_5->setText(QApplication::translate("BillWidget", "\350\275\254\350\264\246\350\265\204\351\207\221\357\274\232", 0));
         label_2->setText(QApplication::translate("BillWidget", "\347\274\226\345\217\267\357\274\232", 0));
         name->setText(QString());
-        billCount->setText(QString());
-        label_7->setText(QApplication::translate("BillWidget", "\345\215\225\346\225\260\357\274\232", 0));
-        importBtn->setText(QApplication::translate("BillWidget", "\345\257\274\345\205\245\346\225\260\346\215\256\345\272\223", 0));
-        label_4->setText(QApplication::translate("BillWidget", "\346\200\273\346\210\220\344\272\244\351\242\235\357\274\232", 0));
+        dateEdit->setDisplayFormat(QApplication::translate("BillWidget", "yyyy-MM-dd", 0));
         calculateBtn->setText(QApplication::translate("BillWidget", "\350\256\241\347\256\227", 0));
-        label_5->setText(QApplication::translate("BillWidget", "\350\275\254\350\264\246\350\265\204\351\207\221\357\274\232", 0));
-        label_11->setText(QApplication::translate("BillWidget", "TextLabel", 0));
+        label_4->setText(QApplication::translate("BillWidget", "\346\200\273\346\210\220\344\272\244\351\242\235\357\274\232", 0));
+        totalTurnover->setText(QString());
+        costPrice->setText(QString());
+        costPrice->setPlaceholderText(QString());
+        label_3->setText(QApplication::translate("BillWidget", "\346\210\220\346\234\254\357\274\232", 0));
+        label_11->setText(QApplication::translate("BillWidget", "\346\230\257\345\220\246\351\200\200\350\264\247\357\274\232", 0));
+        reject->setText(QApplication::translate("BillWidget", "\345\220\246", 0));
         groupBox_2->setTitle(QApplication::translate("BillWidget", "\346\225\260\346\215\256", 0));
         deleteBtn->setText(QApplication::translate("BillWidget", "\345\210\240\351\231\244\346\255\244\350\241\214", 0));
     } // retranslateUi

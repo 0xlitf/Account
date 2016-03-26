@@ -12,9 +12,18 @@ BillWidget::BillWidget(QWidget *parent)
 	ui.tableView->setSortingEnabled(true);
 
 	connect(ui.dateEdit, SIGNAL(dateChanged(const QDate &)), this, SLOT(updateTableView(const QDate &)));
+	connect(ui.relics,&QCheckBox::stateChanged,[=](int state)
+	{
+		state ? ui.relics->setText(QString::fromLocal8Bit("ÊÇ")) : ui.relics->setText(QString::fromLocal8Bit("·ñ"));
+	});
+	connect(ui.reject, &QCheckBox::stateChanged, [=](int state)
+	{
+		state ? ui.reject->setText(QString::fromLocal8Bit("ÊÇ")) : ui.reject->setText(QString::fromLocal8Bit("·ñ"));
+	});
 
 	showTableView();
 }
+
 void BillWidget::updateTableView(const QDate & date)
 {
 	showTableView();
@@ -82,4 +91,35 @@ void BillWidget::showTableView()
 	static_cast<TableView*>(ui.tableView)->updateTableView(QString::fromUtf8("time = '%1'").arg(ui.dateEdit->text()));
 }
 
+void BillWidget::paintEvent(QPaintEvent *)
+{
+	if (ui.reject->checkState())
+	{
+		if (!ui.costPrice->text().contains("-"))
+		{
+			ui.costPrice->setText(QString::fromLocal8Bit("-") + ui.costPrice->text());
+		}
+	}
+	else
+	{
+		if (ui.costPrice->text().contains("-"))
+		{
+			ui.costPrice->setText(ui.costPrice->text().replace("-",""));
+		}
+	}
 
+	if (ui.reject->checkState())
+	{
+		if (!ui.totalTurnover->text().contains("-"))
+		{
+			ui.totalTurnover->setText(QString::fromLocal8Bit("-") + ui.totalTurnover->text());
+		}
+	}
+	else
+	{
+		if (ui.totalTurnover->text().contains("-"))
+		{
+			ui.totalTurnover->setText(ui.totalTurnover->text().replace("-", ""));
+		}
+	}
+}

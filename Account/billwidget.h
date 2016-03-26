@@ -15,7 +15,8 @@ public:
 	~BillWidget();
 	public slots:
 	void showTableView();
-	private slots :
+	void paintEvent(QPaintEvent*);
+private slots :
 	void on_calculateBtn_clicked();
 	void on_importBtn_clicked();
 	void on_deleteBtn_clicked();
